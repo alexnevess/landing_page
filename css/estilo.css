@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    /*todos os itens de body ficaram "colado na tela"*/
+    background-color: #FFFAFA;
+    /*modifica a cor de fundo de toda a tela*/
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*modifica o cabeçalho da página*/
+header {
+    font-size: 30px;
+    /*tamanho da fonte do cabeçalho*/
+    padding: 2vw 0 0 5vw;
+    /*background-color: Red;*/
+}
+
+header div {
+    display: inline-block;
+    /*coloca as duas divs do cabeçalho uma do lado da outra*/
+}
+
+#whatsapp-topo {
+    width: 19px;
+    margin-right: 3px;
+}
+
+#link_topo {
+    float: right;
+    /*coloca a segunda div do cabeçalho na extrema direita*/
+    margin-right: 5vw
+    /*margin direita da segunda div*/
+}
+
+/*modifica o conteúdo principal da página*/
+main {
+    display: flex;*
+    /*display flex para colocar uma div do lado da outra(divs de conteúdo principal)*/
+}
+
+/*div de texto*/
+#principal-texto {
+    /*background-color: blue;*/
+    width: 50%;
+    height: 85vh;
+    margin-bottom: 30px;
+}
+
+/*texto abaixo do texto principal*/
+#texto-pequeno {
+    font-size: 20px;
+    max-width: 75%;
+    height: auto;
+    text-align: justify;
+}
+
+/*botão principal*/
+#botao {
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    background-color: #ffc340;
+    padding: 15px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    margin: 5vw;
+}
+
+#botao:hover {
+    background-color: #f3ae18;
+}
+
+/*div do video*/
+#principal-midia {
+    /*background-color: green;*/
+    width: 50%;
+    height: 90vh;
+    display: flex;/*para colocar o video no meio da div*/
+    justify-content: center;/*Alinha no centro verticalmente*/
+    align-items: center;/*Alinha no centro horizontalmente*/
+    height: 85vh;
+}
+
+video{
+    border-radius: 30px;
+    border: 5px solid #f3ae18;
+}
+
+/*modifica o conteudo dentro da div principal-texto */
+#conteudo {
+    font-size: 95px;
+    padding: 10vw 5vw 2vw;
+}
+
+#conteudo div {
+    margin: -10px 0;
+    /* aproxima as divs de conteúdo */
+}
+
+/*modifica o conteudo dentro da div principal-texto */
+#cor {
+    color: #ffc340;
+}
+
+#secao-sobre{
+    padding: 0 5vw 0;
+    background-color: #f3ae18;
+    height: 85vh;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #principal-texto,
+    #principal-midia {
+        width: 100vw;
+    }
+
+    #principal-texto{
+        height: auto
+    }
+    #texto-pequeno{
+        max-width: 100%;
+    }
+
+    #botao{
+        display: block; /* Faz o botão ocupar a linha toda no mobile */
+        margin: 0 auto; /* Centraliza o botão horizontalmente */
+        font-size: 24px; /* Ajusta o tamanho da fonte para mobile */
+        max-width: 180px; /* Limita a largura do botão no mobile */
+        text-align: center;
+    }
+
+    video {
+        width: 90%;
+        border: none;
+        margin: 0;
+    }
+
+    #conteudo {
+        font-size: 70px;
+    }
+
+    #principal-midia {
+        align-items: flex-start; /* Alinha o conteúdo ao topo no mobile */
+        padding-top: 10px; /* Opcional: espaço entre o topo e o vídeo */
+        height: auto;
+    }
+
+    #secao-sobre{
+        margin-top: 40px;
+    }
+}
